@@ -54,7 +54,7 @@ PREVIOUS=$(cat ${STATE} 2>/dev/null)
 if [ -z "${PREVIOUS}" ]; then
     log_change "initialized hostname is now ${CURRENT}"
     
-    if [ ${LOGONLY} = 0]; then
+    if [ ${LOGONLY} = 0 ]; then
         hostname-nsupdate.sh | nsupdate -k ${NSUPDATE_KEY}
     fi
 else
