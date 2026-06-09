@@ -69,9 +69,8 @@ else
             hostname-nsupdate.sh | nsupdate -k ${NSUPDATE_KEY}
         fi
 
-        printf "%s\n" "${CURRENT}" > ${STATE}
-
         log_change "finished"
     fi
 fi
 
+printf "%s\n" "${CURRENT}" > ${STATE}
